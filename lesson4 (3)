@@ -1,0 +1,8 @@
+import numpy as np
+import random
+
+
+A = np.random.randint(0, 1000, 100)
+sr = np.mean(A)
+
+print(sr)
