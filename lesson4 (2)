@@ -1,0 +1,9 @@
+import numpy as np
+
+v = int(input())
+xx= np.array(range(v)) 
+summ = 0
+for x in xx:
+    summ +=x
+
+print(summ)
