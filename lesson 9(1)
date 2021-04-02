@@ -1,0 +1,5 @@
+import random
+
+input()
+variant = ["Да", "Нет"]
+print (random.choice (variant))
