@@ -1,0 +1,15 @@
+import random
+
+variant = ["Да", "Нет"]
+questions = dict()
+
+while True:
+    ques = input()
+    if ques in questions:
+        print(questions[ques])
+    elif ques == "Спасибо":
+        break
+    else:
+        answer = (random.choice (variant))
+        questions[ques] =answer
+        print(answer)
