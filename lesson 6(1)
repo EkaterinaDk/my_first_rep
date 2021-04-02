@@ -1,0 +1,26 @@
+from pprint import pprint
+
+class Character:
+    def __init__ (self, name, age, species, address, food):
+        self.name, self.age, self.species, self.address, self.food = name, age, species, address, food
+        self.key = name
+    def __repr__ (self):
+        return "Character ('%s', %s, '%s', '%s', '%s')" % (self.name, self.age, self.species,self.address, self.food)
+        
+ded = Character("Дедка", 80, "человек", "изба", "репка")
+baba = Character("Бабка", 75, "человек", "изба", "колобок")
+vnychka = Character("Внучка", 15, "человек", "изба", "пирожок")
+zhychka = Character("Жучка", 10, "собака", "конура", "кость")
+koshka = Character( "Мурка" , 5, "кошка", "чердак", "мышка")
+myshka = Character("Мышка", 1, "мышь", "подвал", "сыр")   
+
+repka = {
+    ded.key : ded,
+    baba.key : baba,
+    vnychka.key : vnychka,
+    zhychka.key : zhychka,
+    koshka.key: koshka,
+    myshka.key : myshka
+}
+pprint (repka)
+pprint (repka[koshka.key])
