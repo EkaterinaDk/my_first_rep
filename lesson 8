@@ -1,0 +1,35 @@
+from pprint import pprint
+
+
+# Добавила 2 пустую строку перед классом. согласна с PEP8, что пустые строки делают код более читаемым
+# Комментарии пишу до кода
+class Character:
+    def __init__ (self, name, age, species, address, food):
+        self.name, self.age, self.species, self.address, self.food = name, age, species, address, food
+        self.key = name
+    def __repr__ (self):
+# добавила перенос строки, чтобы длина последней не превышала 79 символов        
+        return "Character ('%s', %s, '%s', '%s', '%s')" \    
+                % (self.name, self.age, self.species,self.address, self.food)
+  
+ded = Character("Дедка", 80, "человек", "изба", "репка")
+baba = Character("Бабка", 75, "человек", "изба", "колобок")
+vnychka = Character("Внучка", 15, "человек", "изба", "пирожок")
+zhychka = Character("Жучка", 10, "собака", "конура", "кость")
+koshka = Character( "Мурка" , 5, "кошка", "чердак", "мышка")
+myshka = Character("Мышка", 1, "мышь", "подвал", "сыр")   
+
+# изменила название словаря, для улучшения понимания + мн.ч
+heroes = {
+    ded.key : ded,
+    baba.key : baba,
+    vnychka.key : vnychka,
+    zhychka.key : zhychka,
+    koshka.key: koshka,
+    myshka.key : myshka
+}
+pprint(repka) # пробелы перед скобками не нужны
+pprint(repka[koshka.key])
+
+# Согласно PEP8 при написании кода стала использовать пробелы, 
+не используя табуляцию (лично мне с табуляцией было удобнее)  
