@@ -1,0 +1,38 @@
+Class Characters():
+    def __init__(self, c_name, c_age, c_address, c_food):
+		    self.name, self.age, self.address, self.food = c_name, c_age, c_species, c_address, c_food
+        
+    def to_pull():
+		    pass
+
+    def be_located_in():
+		    pass
+
+    def feed_on():
+		    pass
+        
+
+Class People(Characters):
+    def __repr__ (self):
+        return "Person ('%s', %s, '%s', '%s')" % (self.name, self.age, self.address, self.food)
+
+    def invite():
+		    pass
+
+    def to_plant():
+		    pass
+        
+
+Class Animals(Characters):
+    def __init__(self, с_species, c_name, c_age, c_address, c_food):
+		    super().__init__( c_name, c_age, c_address, c_food)
+		    self.species = c_species
+
+    def __repr__ (self):
+        return "Animal ('%s', %s, '%s', '%s', '%s')" % (self.species, self.name, self.age, self.address, self.food)
+
+    def to_help():
+		    pass
+
+    def to_harm():
+		    pass
