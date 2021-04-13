@@ -1,0 +1,7 @@
+class NewInt(int):
+    def __add__ (self, x):
+        return super().__add__(x+1)
+             
+            
+y = NewInt(2)
+print(y+2)
