@@ -1,0 +1,44 @@
+import random
+import copy
+
+variant = ["Да", "Нет"]
+questions_a = {
+    "Тест" : "Тест"
+}
+questions_b = copy.copy(questions_a)
+
+
+# функция сравнения
+def compare(S1, S2): 
+    ngrams = [
+        S1 [i:i+3] for i in range(len(S1))
+    ]
+    count = 0
+    for ngram in ngrams:
+        count+=S2.count(ngram)
+    return count/max(len(S1), len(S2))
+    
+    
+# функция перебора памяти 
+def a_cicle (a_dict, q):
+    for key in a_dict.keys():
+        if compare (q, key) < 0.49:
+            continue
+        elif compare (q, key) > 0.49:
+            return (a_dict[key])
+        else:
+            return None
+
+
+# цикл повторения вопросов, и подбора ответа на них
+while True:
+    ques = input("Ваш вопрос?", )
+    if compare(ques, "Спасибо") > 0.49:
+        break
+    if a_cicle(questions_a, ques) == None:
+        answer = random.choice (variant)
+        questions_b[ques] = answer
+        questions_a = copy.copy(questions_b)
+        print(answer)
+    else:
+        print(a_cicle(questions_a, ques))
