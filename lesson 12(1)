@@ -1,0 +1,16 @@
+Class Characters ():
+    def __init__(self, c_name, c_age, c_address, c_food):
+        self.name, self.age, self.address, self.food = c_name, c_age, c_species, c_address, c_food
+
+
+Class People(Characters):
+    def __repr__ (self):
+        return "Person ('%s', %s, '%s', '%s')" % (self.name, self.age, self.address, self.food)
+
+
+Class Animals(Characters):
+    def __init__(self, с_species, c_name, c_age, c_address, c_food):
+		    super().__init__( c_name, c_age, c_address, c_food)
+		    self.species = c_species
+    def __repr__ (self):
+        return "Animal ('%s', %s, '%s', '%s', '%s')" % (self.species, self.name, self.age, self.address, self.food)
