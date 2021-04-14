@@ -1,0 +1,10 @@
+class MyList(set):
+    def __add__ (self, x):        
+        if x in self:
+             raise ValueError ("Такой элемент уже есть в списке")
+        else: 
+            super().add(x)	 
+            
+y= MyList("hello")
+print (y.__add__("a"))
+print(y)
