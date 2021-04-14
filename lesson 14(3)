@@ -6,4 +6,5 @@ class MyList(set):
             super().add(x)	 
             
 y= MyList("hello")
+y.__add__("h")
 print(y)
